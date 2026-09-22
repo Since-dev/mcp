@@ -2,6 +2,14 @@
   "name": "since",
   "version": "1.0.0",
   "description": "Watch dependencies, verify facts, inspect coverage, and catch up on changes with durable cursors.",
+  "settings": [
+    {
+      "name": "Since.dev API key",
+      "description": "Your Since.dev workspace API key.",
+      "envVar": "SINCE_API_KEY",
+      "sensitive": true
+    }
+  ],
   "mcpServers": {
     "since": {
       "httpUrl": "https://api.since.dev/mcp",
