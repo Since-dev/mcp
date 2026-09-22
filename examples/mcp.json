@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "since": {
+      "url": "https://api.since.dev/mcp",
+      "headers": {
+        "Authorization": "Bearer ${SINCE_API_KEY}"
+      }
+    }
+  }
+}

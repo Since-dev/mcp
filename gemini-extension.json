@@ -1,0 +1,13 @@
+{
+  "name": "since",
+  "version": "1.0.0",
+  "description": "Watch dependencies, verify facts, inspect coverage, and catch up on changes with durable cursors.",
+  "mcpServers": {
+    "since": {
+      "httpUrl": "https://api.since.dev/mcp",
+      "headers": {
+        "Authorization": "Bearer ${SINCE_API_KEY}"
+      }
+    }
+  }
+}
