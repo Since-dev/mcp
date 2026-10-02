@@ -1,7 +1,7 @@
 {
   "name": "since",
-  "version": "1.0.0",
-  "description": "Watch dependencies, verify facts, inspect coverage, and catch up on changes with durable cursors.",
+  "version": "1.4.3",
+  "description": "Grant, your COO, and his AI team: live answers, team status and decisions, plus World State.",
   "settings": [
     {
       "name": "Since.dev API key",
