@@ -11,7 +11,7 @@
     {
       "name": "since-dev",
       "source": "./",
-      "description": "Know what changed in every package, AI model, API and runtime your code depends on, and fix what breaks. Since.dev checks code before upgrades, flags retiring AI models with the date on the platform you call, and opens fix pull requests for review."
+      "description": "Catch breaking changes, deprecations, security advisories and retiring AI models in your dependencies before they break your code, and get the fix: file and line, days left, the pull request."
     }
   ]
 }
