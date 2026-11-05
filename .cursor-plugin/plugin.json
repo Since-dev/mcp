@@ -1,7 +1,7 @@
 {
   "name": "since-dev",
   "description": "Catch breaking changes, deprecations, security advisories and retiring AI models in your dependencies before they break your code, and get the fix: file and line, days left, the pull request.",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "author": {
     "name": "Since.dev",
     "email": "support@since.dev"
