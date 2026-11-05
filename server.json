@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Since-dev/mcp",
+  "title": "Since.dev",
+  "description": "What changed in the packages, APIs and services your code depends on, and the fixes it needs.",
+  "version": "4.0.0",
+  "websiteUrl": "https://since.dev",
+  "icons": [
+    {
+      "src": "https://since.dev/icon-512.png"
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/since-dev/mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.since.dev/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "docsUrl": "https://since.dev/docs"
+    }
+  }
+}

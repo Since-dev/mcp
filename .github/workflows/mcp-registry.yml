@@ -1,0 +1,19 @@
+# Publishes server.json to the Official MCP Registry as io.github.Since-dev/mcp.
+# The registry trusts this run's GitHub identity for the Since-dev namespace, so no key or token is stored.
+# Run it from the Actions tab after a release bumps the version in server.json.
+name: Publish to the MCP Registry
+on: workflow_dispatch
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install mcp-publisher
+        run: curl -fsSL "https://github.com/modelcontextprotocol/registry/releases/download/v1.8.7/mcp-publisher_linux_amd64.tar.gz" | tar xz mcp-publisher
+      - name: Sign in with this run's GitHub identity
+        run: ./mcp-publisher login github-oidc
+      - name: Publish
+        run: ./mcp-publisher publish
