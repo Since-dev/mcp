@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "since": {
+      "type": "http",
+      "url": "https://api.since.dev/mcp"
+    }
+  }
+}

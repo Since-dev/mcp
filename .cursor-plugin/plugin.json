@@ -1,0 +1,29 @@
+{
+  "name": "since-dev",
+  "description": "Know what changed in every package, AI model, API and runtime your code depends on, and fix what breaks. Since.dev checks code before upgrades, flags retiring AI models with the date on the platform you call, and opens fix pull requests for review.",
+  "version": "4.0.0",
+  "author": {
+    "name": "Since.dev",
+    "email": "support@since.dev"
+  },
+  "homepage": "https://since.dev/docs#mcp",
+  "repository": "https://github.com/since-dev/mcp",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "dependencies",
+    "breaking-changes",
+    "deprecations",
+    "ai-models",
+    "model-retirement",
+    "end-of-life",
+    "security-advisories",
+    "upgrades"
+  ],
+  "logo": "assets/logo.png",
+  "mcpServers": {
+    "since": {
+      "url": "https://api.since.dev/mcp"
+    }
+  }
+}

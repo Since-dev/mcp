@@ -2,18 +2,7 @@
   "servers": {
     "since": {
       "type": "http",
-      "url": "https://api.since.dev/mcp",
-      "headers": {
-        "Authorization": "Bearer ${input:since-key}"
-      }
+      "url": "https://api.since.dev/mcp"
     }
-  },
-  "inputs": [
-    {
-      "id": "since-key",
-      "type": "promptString",
-      "description": "Since.dev API key",
-      "password": true
-    }
-  ]
+  }
 }

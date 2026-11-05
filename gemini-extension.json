@@ -1,7 +1,7 @@
 {
   "name": "since",
-  "version": "1.4.3",
-  "description": "Grant, your COO, and his AI team: live answers, team status and decisions, plus World State.",
+  "version": "4.0.0",
+  "description": "What changed in the packages, APIs and services your code depends on, and the fixes it needs.",
   "settings": [
     {
       "name": "Since.dev API key",

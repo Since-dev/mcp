@@ -1,0 +1,30 @@
+---
+description: Check dependencies, AI model IDs, runtimes and CI runners with Since.dev before changing them
+alwaysApply: false
+globs:
+  - "**/package.json"
+  - "**/package-lock.json"
+  - "**/pnpm-lock.yaml"
+  - "**/yarn.lock"
+  - "**/requirements*.txt"
+  - "**/pyproject.toml"
+  - "**/poetry.lock"
+  - "**/go.mod"
+  - "**/Cargo.toml"
+  - "**/Gemfile"
+  - "**/pom.xml"
+  - "**/build.gradle*"
+  - "**/composer.json"
+  - "**/Dockerfile*"
+  - "**/.github/workflows/*.yml"
+  - "**/.nvmrc"
+  - "**/.python-version"
+  - "**/.tool-versions"
+---
+
+When you change a dependency version, a manifest or lockfile, an AI model ID, a runtime version, a Docker base image or a CI runner label, check it with the Since.dev MCP tools first:
+
+- `check_code` with the manifest, lockfile, model ID or `surface` (`runtime:<product>@<version>`) reports what is affected, on which line, the days left and the replacement.
+- `whats_changed` with the package and `since` set to the current version lists every breaking change and deprecation between that version and today, each with its source.
+
+Treat `needs_review` and `unknown` as not settled, never as safe. Use the replacement the answer names. `fix_code` opens a fix pull request for a connected repository, and the editor asks before it runs.

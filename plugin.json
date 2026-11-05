@@ -1,0 +1,51 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "since-dev",
+  "version": "4.0.0",
+  "description": "Know what changed in every package, AI model, API and runtime your code depends on, and fix what breaks. Since.dev checks code before upgrades, flags retiring AI models with the date on the platform you call, and opens fix pull requests for review.",
+  "author": {
+    "name": "Since.dev",
+    "email": "support@since.dev",
+    "url": "https://since.dev"
+  },
+  "homepage": "https://since.dev/docs#mcp",
+  "repository": "https://github.com/since-dev/mcp",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "dependencies",
+    "breaking-changes",
+    "deprecations",
+    "ai-models",
+    "model-retirement",
+    "end-of-life",
+    "security-advisories",
+    "upgrades"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Since.dev",
+        "shortDescription": "What changed in your dependencies, and the fix",
+        "longDescription": "Know what changed in every package, AI model, API and runtime your code depends on, and fix what breaks. Since.dev checks code before upgrades, flags retiring AI models with the date on the platform you call, and opens fix pull requests for review.",
+        "developerName": "Since.dev",
+        "category": "Coding",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://since.dev",
+        "privacyPolicyURL": "https://since.dev/privacy",
+        "termsOfServiceURL": "https://since.dev/terms",
+        "defaultPrompt": [
+          "Check this repo's dependencies with Since.dev before we upgrade anything.",
+          "Which AI models in this code are retiring, and what replaces them?",
+          "What changed in this package since my training cutoff?"
+        ],
+        "brandColor": "#1A2FBF",
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "since-dev",
+  "owner": {
+    "name": "Since.dev",
+    "email": "support@since.dev"
+  },
+  "metadata": {
+    "description": "The Since.dev plugin: what changed in every package, AI model, API and runtime your code depends on, and the fix."
+  },
+  "plugins": [
+    {
+      "name": "since-dev",
+      "source": "./",
+      "description": "Know what changed in every package, AI model, API and runtime your code depends on, and fix what breaks. Since.dev checks code before upgrades, flags retiring AI models with the date on the platform you call, and opens fix pull requests for review."
+    }
+  ]
+}
