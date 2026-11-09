@@ -15,6 +15,10 @@ Since.dev tracks every package in 18 registries, every AI model's retirement on 
 
 Every install signs in through your browser (OAuth). You approve the client for one Since.dev workspace, and no key is stored in a file. A free account works.
 
+### Claude (claude.ai and the Claude apps)
+
+Open [Since.dev in the connector directory](https://claude.ai/directory/connectors/since-dev), click Connect and sign in.
+
 ### Claude Code
 
 Install the plugin, which adds the server and four skills:
