@@ -67,7 +67,7 @@ codex mcp login since
 gemini extensions install https://github.com/since-dev/mcp
 ```
 
-The extension asks for a workspace API key (see below). To sign in through the browser instead, add the server directly:
+Then sign in through the browser from Gemini CLI with `/mcp auth since`. Or add only the server:
 
 ```sh
 gemini mcp add --transport http since https://api.since.dev/mcp

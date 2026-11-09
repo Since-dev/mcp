@@ -2,19 +2,11 @@
   "name": "since",
   "version": "4.3.0",
   "description": "What changed in the packages, APIs and services your code depends on, and the fixes it needs.",
-  "settings": [
-    {
-      "name": "Since.dev API key",
-      "description": "Your Since.dev workspace API key.",
-      "envVar": "SINCE_API_KEY",
-      "sensitive": true
-    }
-  ],
   "mcpServers": {
     "since": {
       "httpUrl": "https://api.since.dev/mcp",
-      "headers": {
-        "Authorization": "Bearer ${SINCE_API_KEY}"
+      "oauth": {
+        "enabled": true
       }
     }
   }
