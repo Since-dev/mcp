@@ -1,6 +1,6 @@
 {
   "name": "since",
-  "version": "4.2.0",
+  "version": "4.3.0",
   "description": "What changed in the packages, APIs and services your code depends on, and the fixes it needs.",
   "settings": [
     {
