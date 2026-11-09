@@ -36,7 +36,7 @@ claude mcp add --transport http since https://api.since.dev/mcp
 
 ### Cursor
 
-Click **Add to Cursor** above, or add this repository as a plugin to get the server, the skills and a rule that checks dependency, model and runtime changes.
+Click **Add to Cursor** above, or install the Cursor plugin ([Since-dev/cursor](https://github.com/since-dev/cursor)) to get the server, the skills and a rule that checks dependency, model and runtime changes.
 
 ### VS Code
 
@@ -97,7 +97,7 @@ A key reaches only its own workspace, over the API and MCP, and any member with 
 
 - **The server:** 3 tools, from the same record as the Since.dev API. `whats_changed` and `check_code` only read, so your client runs them without asking. `fix_code` opens fix pull requests, so your client asks before every call.
 - **Skills** (Claude Code, Cursor, Codex and other clients that read Agent Skills): [`since-before-upgrading`](skills/since-before-upgrading/SKILL.md), [`since-model-retirements`](skills/since-model-retirements/SKILL.md), [`since-what-changed`](skills/since-what-changed/SKILL.md), [`since-ci-and-runtimes`](skills/since-ci-and-runtimes/SKILL.md). They tell the agent when to check: before upgrades, when code names a model, before writing against something it learned in training, and when editing CI or runtimes.
-- **A Cursor rule** ([rules/since.mdc](rules/since.mdc)) that brings the same checks to manifest, lockfile, Dockerfile and workflow edits.
+- **For Cursor:** the plugin at [Since-dev/cursor](https://github.com/since-dev/cursor) adds a rule that brings the same checks to manifest, lockfile, Dockerfile and workflow edits.
 
 ## Tools
 
