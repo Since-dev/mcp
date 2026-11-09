@@ -36,7 +36,7 @@
         "shortDescription": "What changed, and the fix",
         "longDescription": "Catch breaking changes, deprecations, security advisories and retiring AI models in your dependencies before they break your code, and get the fix: file and line, days left, the pull request.",
         "developerName": "Since.dev",
-        "category": "Coding",
+        "category": "Developer Tools",
         "capabilities": [
           "Read",
           "Write"
@@ -58,53 +58,48 @@
         "test_cases": {
           "positive": [
             {
+              "description": "A model retirement: the date, the days left and the replacement.",
               "prompt": "Is gpt-4o-2024-05-13 being retired, and what should I use instead?",
-              "tools_triggered": [
-                "check_code"
-              ],
+              "tools_triggered": "check_code",
               "expected_behavior": "Calls check_code with the model id and answers with the retirement date, the days left, the replacement and the cited source."
             },
             {
+              "description": "A package's breaking changes between two versions, each cited.",
               "prompt": "What changed in react between 18.2.0 and 19.0.0 that could break my app?",
-              "tools_triggered": [
-                "whats_changed"
-              ],
+              "tools_triggered": "whats_changed",
               "expected_behavior": "Calls whats_changed for npm:react and lists the breaking changes between those versions, each with its source."
             },
             {
+              "description": "A manifest checked for breaking changes and advisories.",
               "prompt": "Check this package.json for breaking changes and security advisories: {\"dependencies\": {\"next\": \"13.4.0\", \"axios\": \"0.21.1\"}}",
-              "tools_triggered": [
-                "check_code"
-              ],
+              "tools_triggered": "check_code",
               "expected_behavior": "Calls check_code with the manifest and lists each affected dependency with its severity, the reason and the fixed version."
             },
             {
+              "description": "A runtime's end of life, with its date and source.",
               "prompt": "When does Node.js 18 reach end of life, and is it past?",
-              "tools_triggered": [
-                "check_code"
-              ],
+              "tools_triggered": "check_code",
               "expected_behavior": "Calls check_code with the runtime and says Node.js 18 reached end of life on 2025-04-30, with the source."
             },
             {
+              "description": "A public repository scanned for retiring models and package problems.",
               "prompt": "Does the public repository https://github.com/vercel/ai use any AI models or packages with problems?",
-              "tools_triggered": [
-                "check_code"
-              ],
+              "tools_triggered": "check_code",
               "expected_behavior": "Calls check_code with the repository URL; answers with the findings, or says the scan is running and calls again after the time it gives."
             }
           ],
           "negative": [
             {
-              "prompt": "Write a haiku about autumn leaves.",
-              "expected_behavior": "Answers without calling any Since.dev tool."
+              "description": "Creative writing: answered without calling any Since.dev tool.",
+              "prompt": "Write a haiku about autumn leaves."
             },
             {
-              "prompt": "What is the capital of Australia?",
-              "expected_behavior": "Answers without calling any Since.dev tool."
+              "description": "General knowledge: answered without calling any Since.dev tool.",
+              "prompt": "What is the capital of Australia?"
             },
             {
-              "prompt": "Translate 'good morning' into Spanish.",
-              "expected_behavior": "Answers without calling any Since.dev tool."
+              "description": "Translation: answered without calling any Since.dev tool.",
+              "prompt": "Translate 'good morning' into Spanish."
             }
           ]
         }
