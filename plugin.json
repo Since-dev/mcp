@@ -33,7 +33,7 @@
     "com.openai": {
       "interface": {
         "displayName": "Since.dev",
-        "shortDescription": "What changed in your dependencies, and the fix",
+        "shortDescription": "What changed, and the fix",
         "longDescription": "Catch breaking changes, deprecations, security advisories and retiring AI models in your dependencies before they break your code, and get the fix: file and line, days left, the pull request.",
         "developerName": "Since.dev",
         "category": "Coding",
@@ -42,6 +42,7 @@
           "Write"
         ],
         "websiteURL": "https://since.dev",
+        "supportURL": "https://github.com/since-dev/mcp/issues",
         "privacyPolicyURL": "https://since.dev/privacy",
         "termsOfServiceURL": "https://since.dev/terms",
         "defaultPrompt": [
@@ -52,6 +53,64 @@
         "brandColor": "#1A2FBF",
         "composerIcon": "./assets/logo.png",
         "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "prompt": "Is gpt-4o-2024-05-13 being retired, and what should I use instead?",
+              "tools_triggered": [
+                "check_code"
+              ],
+              "expected_behavior": "Calls check_code with the model id and answers with the retirement date, the days left, the replacement and the cited source."
+            },
+            {
+              "prompt": "What changed in react between 18.2.0 and 19.0.0 that could break my app?",
+              "tools_triggered": [
+                "whats_changed"
+              ],
+              "expected_behavior": "Calls whats_changed for npm:react and lists the breaking changes between those versions, each with its source."
+            },
+            {
+              "prompt": "Check this package.json for breaking changes and security advisories: {\"dependencies\": {\"next\": \"13.4.0\", \"axios\": \"0.21.1\"}}",
+              "tools_triggered": [
+                "check_code"
+              ],
+              "expected_behavior": "Calls check_code with the manifest and lists each affected dependency with its severity, the reason and the fixed version."
+            },
+            {
+              "prompt": "When does Node.js 18 reach end of life, and is it past?",
+              "tools_triggered": [
+                "check_code"
+              ],
+              "expected_behavior": "Calls check_code with the runtime and says Node.js 18 reached end of life on 2025-04-30, with the source."
+            },
+            {
+              "prompt": "Does the public repository https://github.com/vercel/ai use any AI models or packages with problems?",
+              "tools_triggered": [
+                "check_code"
+              ],
+              "expected_behavior": "Calls check_code with the repository URL; answers with the findings, or says the scan is running and calls again after the time it gives."
+            }
+          ],
+          "negative": [
+            {
+              "prompt": "Write a haiku about autumn leaves.",
+              "expected_behavior": "Answers without calling any Since.dev tool."
+            },
+            {
+              "prompt": "What is the capital of Australia?",
+              "expected_behavior": "Answers without calling any Since.dev tool."
+            },
+            {
+              "prompt": "Translate 'good morning' into Spanish.",
+              "expected_behavior": "Answers without calling any Since.dev tool."
+            }
+          ]
+        }
+      },
+      "publication": {
+        "release_notes": "Version 4.2.0: three tools (whats_changed, check_code, fix_code) over OAuth sign-in, and four skills for upgrades, model retirements, changes since training, and CI and runtimes."
       }
     }
   }
