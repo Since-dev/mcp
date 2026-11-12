@@ -29,11 +29,14 @@ It finds each model ID in the code and reports the line it is on.
 
 Look at how the code reaches the model. A client made for Azure, Bedrock or Vertex AI uses that platform's date, which can be earlier or later than the provider's own. Quote the date for the platform the code actually calls, not the first one you see.
 
+An id written as a gateway's route (`vertex_ai/gemini-2.5-pro`, `openrouter/google/gemini-2.5-pro`) comes back `needs_review`: the provider's date is for its own API and may not apply where the gateway sends the request. Say whose date it is and check the gateway's own schedule.
+
 ## When a model is retiring
 
-1. Move to the `replacement` the answer names.
-2. Read the replacement's own changes with `whats_changed` (`{ "model": "<replacement id>" }`): a newer model can reject parameters the old one took.
-3. Check again so nothing still names the old model.
+1. Move to the `replacement` the answer names. When the reason says requests keep working, answered by another model, nothing fails: the answers just come from that model, so tell the user instead of treating it as a break.
+2. Read the finding's `replacementNotes` before you change the id. Each one is something the replacement does differently, from its own documentation: a default that changed, a setting it refuses or now needs, a difference in what comes back, with what keeps the old behavior. Make those changes together with the new id. A move is never the id alone when there are notes.
+3. For anything the notes do not cover, read the replacement's own changes with `whats_changed` (`{ "model": "<replacement id>" }`).
+4. Check again so nothing still names the old model.
 
 ## See what retires soon
 
