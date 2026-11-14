@@ -40,4 +40,4 @@ If the repository is connected to Since.dev, `fix_code` with `repo` opens a pull
 
 ## Cost
 
-Each call costs credits from the workspace's monthly allowance, and each tool's description says how many. Checking a manifest or lockfile costs more than a single package, so check the file once, then read single packages as you need them.
+Each call costs credits from the workspace's monthly allowance. Checking a manifest or lockfile costs more than a single package, so check the file once, then read single packages as you need them.

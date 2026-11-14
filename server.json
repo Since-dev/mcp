@@ -3,7 +3,7 @@
   "name": "io.github.Since-dev/mcp",
   "title": "Since.dev",
   "description": "What changed in the packages, APIs and services your code depends on, and the fixes it needs.",
-  "version": "4.3.0",
+  "version": "4.4.0",
   "websiteUrl": "https://since.dev",
   "icons": [
     {

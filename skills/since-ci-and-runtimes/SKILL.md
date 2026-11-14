@@ -19,10 +19,18 @@ This works for `.nvmrc`, `.node-version`, `.python-version`, `.tool-versions`, `
 
 ## Dockerfiles, compose files and workflows
 
-Read the versions out of the file yourself: base images (`FROM node:18-alpine`), `runs-on:` runner labels (`macos-14`, `ubuntu-22.04`) and `setup-*` action versions (`node-version: 18`). Then check each one as a surface with `check_code`:
+Send the file to `check_code` as code, with its path:
 
 ```json
-{ "surface": "runtime:node@18" }
+{ "code": "<the file's contents>", "path": "Dockerfile" }
+```
+
+The same works for `docker-compose.yml` and `.github/workflows/ci.yml`. The answer names each base image's runtime (`FROM node:18-alpine` runs Node.js 18), each `runs-on:` runner label and each version a `setup-*` action installs, with its end-of-life date and the line it is on.
+
+To check one version before you write it, give it as a surface:
+
+```json
+{ "surface": "runtime:nodejs@18" }
 ```
 
 ```json
