@@ -21,7 +21,7 @@ Each change gives its kind, severity, dates, the replacement and a link to the p
 
 ## Check the code you wrote
 
-After writing it, call `check_code` with the snippet and its language. It reports anything in the code that a recorded change affects, with the line.
+After writing it, call `check_code` with `files`: every file you wrote, each with its path and content, in one call. It reports anything in the code that a recorded change affects, with the line.
 
 ## Ask whether something is still supported
 
