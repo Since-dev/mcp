@@ -6,6 +6,7 @@ What changed in the packages, APIs and services your code depends on, and the fi
 
 [![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=since&config=eyJ1cmwiOiJodHRwczovL2FwaS5zaW5jZS5kZXYvbWNwIn0%3D)
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=since&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapi.since.dev%2Fmcp%22%7D)
+[![Since.dev MCP connector](https://glama.ai/mcp/connectors/io.github.Since-dev/mcp/badges/score.svg)](https://glama.ai/mcp/connectors/io.github.Since-dev/mcp)
 
 [Product](https://since.dev) · [Documentation](https://since.dev/docs) · [MCP reference](https://since.dev/docs#mcp)
 
@@ -105,7 +106,7 @@ A key reaches only its own workspace, over the API and MCP, and any member with 
 
 ### Tools
 
-whats_changed and check_code only read, and both work on every plan; checking a connected repository (`check_code` with `repo`) is on the Business and Platform plans. fix_code writes: with `code` it returns a patch, on every plan, and with `repo` it opens fix pull requests for a person to review, on the Business and Platform plans. A patch or a fix pull request counts against the month's fixes, not credits. A bad input or a call the plan does not include is refused with a plain sentence and costs nothing.
+whats_changed and check_code only read, and both work on every plan; checking a connected repository (`check_code` with `repo`) is on Pro and Enterprise. fix_code writes: with `code` it returns a patch, on every plan, and with `repo` it opens fix pull requests for a person to review, on Pro and Enterprise. A patch or a fix pull request counts against the month's fixes, not credits. A bad input or a call the plan does not include is refused with a plain sentence and costs nothing.
 
 | Tool | What it does | Key inputs |
 | --- | --- | --- |
